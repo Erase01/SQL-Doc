@@ -20,7 +20,7 @@ CREATE TABLE Rechnung
 RID int NOT NULL UNIQUE,                        -- Unique heißt, dass der Wert nur einmal vergeben werden darf
 CustomerID int,
 Betrag int NOT NULL,				-- Not Null heißt, dass die Werte in diesem column immer angegeben werden muessen
-ZusatzID int NOT NULL SERIAL,			-- SELECT generiert automatisch einzigartige integer Zahlen
+ZusatzID int NOT NULL SERIAL,			-- SERIAL generiert automatisch einzigartige integer Zahlen
 PRIMARY KEY(RID),				-- ein column kann als Primary Key angegeben werden um nach diesem zu mappen/sortieren. Der Primary Key ist zudem unique
 FOREIGN KEY(CustomerID) REFERENCES asdf(ID)     -- mit dem Foreign key, kann man auf ein column in einer anderen Tabelle referenzieren
 );
